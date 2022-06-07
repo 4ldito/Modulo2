@@ -81,10 +81,6 @@ function buildToDo(toDo, index) {
   return toDoShell;
 }
 
-function test(event) {
-  console.log(event);
-}
-
 // La función 'buildToDos' debe crear un array de objetos toDo y devolverlo
 // Recibirá como parámetro un array de objetos ToDo
 // Utilizar el método map usando la función previamente creada ('buildToDo')
