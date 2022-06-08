@@ -1,1 +1,28 @@
 // Mixins acá
+.flex(@justify: center, @align: center, @direction: row) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.borderRadius(@radius: 50px) {
+    border-radius: @radius;
+}
+
+.btn(@color: white, @borderRadius: 10px, @fontSize: 1.6rem, @bgColor: @btn-bg-color, @padding: 1.3rem, @txtDecoration: none) {
+    font-weight: 300;
+    color: @color;
+    border-radius: @borderRadius;
+    border: 1px solid black;
+    font-size: @fontSize;
+    background-color: @bgColor;
+    padding: @padding;
+    text-decoration: @txtDecoration;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: #266e2e;
+
+    }
+}
