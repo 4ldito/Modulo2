@@ -1,21 +1,21 @@
 describe("selectorTypeMatcher", function() {
   it("debe retornar el tipo 'id' para un selector de id", function() {
-    var type = selectorTypeMatcher('#pagetitle');
+    let type = selectorTypeMatcher('#pagetitle');
     expect(type).toEqual("id");
   });
 
   it("debe retornar el tipo 'class'  para un selector de clase", function() {
-    var type = selectorTypeMatcher('.image');
+    let type = selectorTypeMatcher('.image');
     expect(type).toEqual("class");
   });
 
   it("debe retornar  el tipo 'tag.class' para un selector de tag.class", function() {
-    var type = selectorTypeMatcher('img.thumbnail');
+    let type = selectorTypeMatcher('img.thumbnail');
     expect(type).toEqual("tag.class");
   });
 
   it("debe retornar el tipo 'tag' para un selector de tag", function() {
-    var type = selectorTypeMatcher('div');
+    let type = selectorTypeMatcher('div');
     expect(type).toEqual("tag");
   });
 });
@@ -23,72 +23,72 @@ describe("selectorTypeMatcher", function() {
 describe("matchFunctionMaker", function() {
 
   it("Debe retornar una funcion que matchie el ID que devuelve TRUE si el elemento matchea el ID", function() {
-    var selector = "#price";
-    var matcher = matchFunctionMaker(selector);
-    var sampleDivEl = document.createElement("DIV");
-    sampleDivEl.id = "price"; // el elemento tiene tres distintas clases en él
-    expect(matcher(sampleDivEl)).toEqual(true);
+    let selector = "#price";
+    let matcher = matchFunctionMaker(selector);
+    let sampleDivEl = document.createElement("DIV");
+    sampleDivEl.id = "price"; // el elemento tiene un id de price
+    expect(matcher(sampleDivEl)).toEqual(true); // price === price?
   });
 
   it("debe retoranar una función que devuelve FALSE si el elemento no matchea el ID", function() {
-    var selector = "#price";
-    var matcher = matchFunctionMaker(selector);
-    var sampleDivEl = document.createElement("DIV");
-    sampleDivEl.id = "logo"; // el elemento tiene tres distintas clases en él
-    expect(matcher(sampleDivEl)).toEqual(false);
+    let selector = "#price";
+    let matcher = matchFunctionMaker(selector);
+    let sampleDivEl = document.createElement("DIV");
+    sampleDivEl.id = "logo"; // el elemento tiene un id de logo
+    expect(matcher(sampleDivEl)).toEqual(false); // price === logo?
   });
 
   it("Debería retornar una funcion que matchie la CLASS que devuelve TRUE si el elemento matchea la className", function() {
-    var selector = ".heading";
-    var matcher = matchFunctionMaker(selector);
-    var sampleDivEl = document.createElement("DIV");
+    let selector = ".heading";
+    let matcher = matchFunctionMaker(selector);
+    let sampleDivEl = document.createElement("DIV");
     sampleDivEl.className = "heading";
     expect(matcher(sampleDivEl)).toEqual(true);
   });
 
   it("debería retornar una función que matchie la CLASS que devuelva TRUE si el elemento matche la classNAme, incluso cuando hay multiples clases en el elemento", function() {
-    var selector = ".heading";
-    var matcher = matchFunctionMaker(selector);
-    var sampleEl = document.createElement("H1");
+    let selector = ".heading";
+    let matcher = matchFunctionMaker(selector);
+    let sampleEl = document.createElement("H1");
     sampleEl.className = "lead heading lightback"; // el elemento tiene tres distintas clases en él
     expect(matcher(sampleEl)).toEqual(true);
   });
 
   it("deberia retornar una function que matchie la CLASS que devuelva FALSE si el elemento no matchie ningun className", function() {
-    var selector = ".photo";
-    var matcher = matchFunctionMaker(selector);
-    var sampleEl = document.createElement("H1");
+    let selector = ".photo";
+    let matcher = matchFunctionMaker(selector);
+    let sampleEl = document.createElement("H1");
     sampleEl.className = "photos lightback abstract"; // el elemento tiene tres distintas clases en él
     expect(matcher(sampleEl)).toEqual(false);
   });
 
   it("debería devolver un función que matchie el TAG que devuelva TRUE cuando el elemento matchea el tagName", function() {
-    var selector = 'div';
-    var matcher = matchFunctionMaker(selector);
-    var sampleDivEl = document.createElement("div");
+    let selector = 'div';
+    let matcher = matchFunctionMaker(selector);
+    let sampleDivEl = document.createElement("div");
     expect(matcher(sampleDivEl)).toEqual(true);
   });
 
   it("debería devolver un función que matchie el TAG.CLASS que devuelva TRUE cuando el elemento matchea el tagName AND Class", function() {
-    var selector = "img.thumbnail";
-    var matcher = matchFunctionMaker(selector);
-    var sampleDivEl = document.createElement("img");
+    let selector = "img.thumbnail";
+    let matcher = matchFunctionMaker(selector);
+    let sampleDivEl = document.createElement("img");
     sampleDivEl.className = "thumbnail lead lightback"; // el elemento tiene tres distintas clases
     expect(matcher(sampleDivEl)).toEqual(true);
   });
 
   it("debería devolver un función que matchie el TAG.CLASS que devuelva FALSE si el elemento no matchea el tag", function() {
-    var selector = "img.photo";
-    var matcher = matchFunctionMaker(selector);
-    var sampleEl = document.createElement("div");
+    let selector = "img.photo";
+    let matcher = matchFunctionMaker(selector);
+    let sampleEl = document.createElement("div");
     sampleEl.className = "photos lightback abstract"; // el elemento tiene tres distintas clases
     expect(matcher(sampleEl)).toEqual(false);
   });
 
   it("debería devolver un función que matchie el TAG.CLASS que devuelva FALSE si el elemento no matchea el className", function() {
-    var selector = "img.photo";
-    var matcher = matchFunctionMaker(selector);
-    var sampleEl = document.createElement("img");
+    let selector = "img.photo";
+    let matcher = matchFunctionMaker(selector);
+    let sampleEl = document.createElement("img");
     sampleEl.className = "photos lightback abstract"; // el elemento tiene tres distintas clases
     expect(matcher(sampleEl)).toEqual(false);
   });
@@ -96,7 +96,7 @@ describe("matchFunctionMaker", function() {
 });
 
 describe("funcion de selector $ ", function() {
-  var elements;
+  let elements;
 
   it("debe seleccionar un elemento por tag name (el root en este caso)", function() {
     elements = $('body');
