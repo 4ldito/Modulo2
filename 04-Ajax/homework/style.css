@@ -1,0 +1,140 @@
+body {
+    background: url(img/bg.jpg) no-repeat center top;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.seeFriends {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff69;
+    border-radius: 20px;
+    border: 3px solid #012030;
+    padding: 0 1rem 1rem 1rem;
+    width: 35%;
+}
+
+.containerTitle {
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.titleFriends {
+    width: 5rem;
+    background-color: #012030;
+    color: white;
+    padding: 1rem 4rem 1rem 4rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    border-bottom: 3px solid black;
+    text-align: center;
+}
+
+#lista {
+    margin-top: 0.5rem;
+}
+
+/* .seeFriends {
+    width: 320px;
+    height: 420px;
+    background: #0000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+} */
+
+.paragraphFriends {
+    text-align: center;
+    color: black;
+    font-size: 1.1rem;
+    background-color: #ffffffc4;
+    border: 1.4px solid #012030;
+    padding: 0.5rem 4rem 0.5rem 4rem;
+    border-radius: 10px;
+}
+
+.containerButton {
+    display: flex;
+    margin-top: 1.2rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerSearch {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    align-items: center;
+}
+
+.boton {
+    text-decoration: none;
+    color: white;
+    background-color: #012030;
+    padding: 1rem;
+    border-radius: 25px;
+    border: 2px solid black;
+    align-self: self-end;
+}
+
+.boton:hover {
+    transition: 0.5s;
+    background-color: #12628b;
+}
+
+#search {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #012030;
+    padding: 1rem;
+    border-radius: 25px;
+    border: 2px solid black;
+    width: 100px;
+    margin-left: 5px;
+}
+
+#search:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #12628b;
+}
+
+#input {
+    width: 50%;
+    margin-left: 5px;
+}
+
+.marked {
+    transition: 1s;
+    background-color: #84ff84;
+}
+.dontFound {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#amigo {
+    transition: 1s;
+    background-color: #ffffff69;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 25px;
+    display: none;
+    transition: 0.5s;
+}
+
+span.display {
+    display: block;
+}
