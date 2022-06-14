@@ -2,13 +2,13 @@ const { EventEmitter } = require('./event-emitter')
 
 //(function () {
 
-let whiteboard = new EventEmitter();
+var whiteboard = new EventEmitter();
 
 // Ultimately, the color of our stroke;
-let color;
+var color;
 
 // The color selection elements on the DOM.
-let colorElements = [].slice.call(document.querySelectorAll('.marker'));
+var colorElements = [].slice.call(document.querySelectorAll('.marker'));
 
 colorElements.forEach(function (el) {
 
@@ -27,9 +27,9 @@ colorElements.forEach(function (el) {
 
 });
 
-let canvas = document.getElementById('paint');
+var canvas = document.getElementById('paint');
 
-let ctx = canvas.getContext('2d')
+var ctx = canvas.getContext('2d')
 
 function resize() {
   // Unscale the canvas (if it was previously scaled)
@@ -37,16 +37,16 @@ function resize() {
 
   // The device pixel ratio is the multiplier between CSS pixels
   // and device pixels
-  let pixelRatio = window.devicePixelRatio || 1;
+  var pixelRatio = window.devicePixelRatio || 1;
 
   // Allocate backing store large enough to give us a 1:1 device pixel
   // to canvas pixel ratio.
-  let w = canvas.clientWidth * pixelRatio,
+  var w = canvas.clientWidth * pixelRatio,
     h = canvas.clientHeight * pixelRatio;
   if (w !== canvas.width || h !== canvas.height) {
     // Resizing the canvas destroys the current content.
     // So, save it...
-    let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+    var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
 
     canvas.width = w; canvas.height = h;
 
@@ -67,10 +67,10 @@ function resize() {
 resize();
 window.addEventListener('resize', resize);
 
-let currentMousePosition = { x: 0, y: 0 };
-let lastMousePosition = { x: 0, y: 0 };
+var currentMousePosition = { x: 0, y: 0 };
+var lastMousePosition = { x: 0, y: 0 };
 
-let drawing = false;
+var drawing = false;
 
 canvas.addEventListener('mousedown', function (e) {
   drawing = true;

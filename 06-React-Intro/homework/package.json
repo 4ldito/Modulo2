@@ -1,6 +1,7 @@
 {
   "name": "06-react-intro",
   "version": "1.0.0",
+  "homepage": "/06-React-Intro/homework/build", 
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",

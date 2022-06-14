@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/06-React-Intro/homework/build/static/css/main.5708bf17.chunk.css",
+    "main.js": "/06-React-Intro/homework/build/static/js/main.16e3d930.chunk.js",
+    "main.js.map": "/06-React-Intro/homework/build/static/js/main.16e3d930.chunk.js.map",
+    "runtime-main.js": "/06-React-Intro/homework/build/static/js/runtime-main.8b779206.js",
+    "runtime-main.js.map": "/06-React-Intro/homework/build/static/js/runtime-main.8b779206.js.map",
+    "static/js/2.aea0a14f.chunk.js": "/06-React-Intro/homework/build/static/js/2.aea0a14f.chunk.js",
+    "static/js/2.aea0a14f.chunk.js.map": "/06-React-Intro/homework/build/static/js/2.aea0a14f.chunk.js.map",
+    "index.html": "/06-React-Intro/homework/build/index.html",
+    "static/css/main.5708bf17.chunk.css.map": "/06-React-Intro/homework/build/static/css/main.5708bf17.chunk.css.map",
+    "static/js/2.aea0a14f.chunk.js.LICENSE.txt": "/06-React-Intro/homework/build/static/js/2.aea0a14f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b779206.js",
+    "static/js/2.aea0a14f.chunk.js",
+    "static/css/main.5708bf17.chunk.css",
+    "static/js/main.16e3d930.chunk.js"
+  ]
+}

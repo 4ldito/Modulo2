@@ -1,33 +1,34 @@
 
-const { whiteboard } = require("./whiteboard")
-const {io} = require("socket.io");
+const { whiteboard } = require("./whiteboard.js")
+const { io } = require("socket.io-client");
 
 //(function () {
 
-  whiteboard = window.whiteboard;
-  let socket = io(window.location.origin);
+//whiteboard = window.whiteboard;
 
-  socket.on('connect', function () {
-    console.log('Connected!');
-  });
+let socket = io(window.location.origin);
 
-  socket.on('load', function (strokes) {
+socket.on('connect', function () {
+  console.log('Connected!');
+});
 
-    strokes.forEach(function (stroke) {
-      let start = stroke.start;
-      let end = stroke.end;
-      let color = stroke.color;
-      whiteboard.draw(start, end, color, false);
-    });
+socket.on('load', function (strokes) {
 
-  });
-
-  socket.on('draw', function (start, end, color) {
+  strokes.forEach(function (stroke) {
+    let start = stroke.start;
+    let end = stroke.end;
+    let color = stroke.color;
     whiteboard.draw(start, end, color, false);
   });
 
-  whiteboard.on('draw', function (start, end, color) {
-    socket.emit('draw', start, end, color);
-  });
+});
+
+socket.on('draw', function (start, end, color) {
+  whiteboard.draw(start, end, color, false);
+});
+
+whiteboard.on('draw', function (start, end, color) {
+  socket.emit('draw', start, end, color);
+});
 
 //})();

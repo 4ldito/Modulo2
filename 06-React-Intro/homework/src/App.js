@@ -6,6 +6,7 @@ import SearchBar from './components/SearchBar.jsx';
 import data, { Cairns } from './data.js';
 
 function App() {
+
   return (
     <div className="App">
       <div>
@@ -26,7 +27,7 @@ function App() {
       <hr />
       <div>
         <SearchBar
-          onSearch={(ciudad) => alert(ciudad)}
+          onSearch={() => alert("Ola")}
         />
       </div>
     </div>
