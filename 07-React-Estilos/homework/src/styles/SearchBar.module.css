@@ -1,0 +1,27 @@
+.searchBarContainer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.inputSearch {
+    margin-right: 1rem;
+    border-radius: 5px;
+    border: 1px solid #0000003d;
+    padding: 0.5rem;
+    padding-left: 0.7rem;
+}
+
+.btnSearch {
+    color: white;
+    background-color: #439d61;
+    border: 2px solid #35543f;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: 0.25s;
+}
+
+.btnSearch:hover {
+    
+    background-color: #327046;
+}

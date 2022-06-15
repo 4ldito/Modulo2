@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/07-React-Estilos/homework/build/static/css/main.dbad5998.css",
+    "main.js": "/07-React-Estilos/homework/build/static/js/main.a0898292.js",
+    "index.html": "/07-React-Estilos/homework/build/index.html",
+    "main.dbad5998.css.map": "/07-React-Estilos/homework/build/static/css/main.dbad5998.css.map",
+    "main.a0898292.js.map": "/07-React-Estilos/homework/build/static/js/main.a0898292.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbad5998.css",
+    "static/js/main.a0898292.js"
+  ]
+}
