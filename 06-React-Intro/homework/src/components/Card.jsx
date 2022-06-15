@@ -9,7 +9,7 @@ import React from 'react';
  */
 
 export default function Card({ max, min, name, img, onClose }, key) {
-  // acá va tu código
+  // acá va tu código 
   return (
     <div key={key}>
       <button onClick={onClose}>X</button>
