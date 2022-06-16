@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/08-React-Estado-LifeCycle/homework/build/static/css/main.0e168ad4.chunk.css",
+    "main.js": "/08-React-Estado-LifeCycle/homework/build/static/js/main.13adfde7.chunk.js",
+    "main.js.map": "/08-React-Estado-LifeCycle/homework/build/static/js/main.13adfde7.chunk.js.map",
+    "runtime-main.js": "/08-React-Estado-LifeCycle/homework/build/static/js/runtime-main.f312ad94.js",
+    "runtime-main.js.map": "/08-React-Estado-LifeCycle/homework/build/static/js/runtime-main.f312ad94.js.map",
+    "static/js/2.407d92b7.chunk.js": "/08-React-Estado-LifeCycle/homework/build/static/js/2.407d92b7.chunk.js",
+    "static/js/2.407d92b7.chunk.js.map": "/08-React-Estado-LifeCycle/homework/build/static/js/2.407d92b7.chunk.js.map",
+    "index.html": "/08-React-Estado-LifeCycle/homework/build/index.html",
+    "static/css/main.0e168ad4.chunk.css.map": "/08-React-Estado-LifeCycle/homework/build/static/css/main.0e168ad4.chunk.css.map",
+    "static/js/2.407d92b7.chunk.js.LICENSE.txt": "/08-React-Estado-LifeCycle/homework/build/static/js/2.407d92b7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f312ad94.js",
+    "static/js/2.407d92b7.chunk.js",
+    "static/css/main.0e168ad4.chunk.css",
+    "static/js/main.13adfde7.chunk.js"
+  ]
+}

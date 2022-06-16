@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    border: 1px solid rgb(213, 213, 213);
+    width: 300px;
+    border-radius: 8px;
+    margin: 1rem;
+    color: #fff;
+    transition: all 3s;
+}
+
+.weather {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.weather img {
+    border-radius: 5000px;
+    background-color: #439d612e;
+    margin-bottom: 0.8rem;
+}
+
+.containerBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btnClose {
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0.5rem;
+    border: 0px;
+    padding: 0.35rem 0.5rem;
+    transition: background-color 0.25s;
+    margin-bottom: -0.5rem;
+}
+.btnClose:hover {
+    background-color: #c80517;
+}
+
+
+.min {
+    margin: 0;
+    color: #39D1FF;
+}
+
+.max {
+    margin: 0;
+    color: #EE4646;
+}

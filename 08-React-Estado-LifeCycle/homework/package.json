@@ -1,6 +1,7 @@
 {
   "name": "08-react-estados-lifecycles",
   "version": "1.0.0",
+  "homepage": "/08-React-Estado-LifeCycle/homework/build",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
@@ -29,5 +30,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-error-overlay": "^6.0.9"
   }
 }
