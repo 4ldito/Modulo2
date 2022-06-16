@@ -1,19 +1,33 @@
-import React, { useState } from "react";
+import React, { useRef } from 'react';
 
-export default function SearchBar({onSearch}) {
-  const [city, setCity] = useState("");
+import styles from '../styles/SearchBar.module.css';
+
+
+
+export default function SearchBar({ onSearch }) {
+  // acá va tu código
+  // const [value, setValue] = React.useState('');
+  const ref = useRef(null);
+
+  function search(e) {
+    //onSearch(value);
+    onSearch(ref.current.value)
+    ref.current.value = '';
+  }
+
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      onSearch(city);
-    }}>
+    <div className={styles.searchBarContainer}>
       <input
+        ref={ref}
+        // value={value}
+        // onChange={(e) => setValue(e.target.value)}
+        className={styles.inputSearch}
         type="text"
-        placeholder="Ciudad..."
-        value={city}
-        onChange={e => setCity(e.target.value)}
-      />
-      <input type="submit" value="Agregar" />
-    </form>
-  );
-}
+        placeholder='Ciudad' />
+      <input
+        className={styles.btnSearch}
+        type="button"
+        onClick={search}
+        value="Agregar" />
+    </div>)
+};
