@@ -1,6 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shallow, mount } from 'enzyme';
+// import { render } from '@testing-library/react';
+// import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import Form, {validate}  from './Form.jsx';
 
 describe('<Form />', () => {
