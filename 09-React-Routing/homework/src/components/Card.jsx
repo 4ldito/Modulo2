@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import style from '../styles/Card.module.css';
 
 
@@ -10,7 +11,9 @@ export default function Card({ max, min, name, img, onClose, id }, key) {
         <div className={style.containerBtn}>
           <button className={style.btnClose} onClick={() => onClose(id)}>X</button>
         </div>
-        <h3>{name}</h3>
+        <Link to={`/city/${id}`} >
+          <h3 className="card-title">{name}</h3>
+        </Link>
         <div className={style.weather}>
           <div>
             <p className={style.min}>Min</p>

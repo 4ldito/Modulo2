@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 // import Card from './components/Card.jsx';
 import Nav from "./components/Nav";
-import Cards from './components/Cards.jsx';
+import Cards from './components/Cards';
+import Footer from './components/Footer'
+import About from './components/About';
+import InfoCity from './components/InfoCity';
+import { Route } from 'react-router-dom';
 //import data from './data.js';
 //import data, { Cairns } from './data.js';
 import style from './styles/ContainerCards.module.css';
@@ -51,12 +55,28 @@ function App() {
 
   return (
     <div className="App">
-      <Nav onSearch={onSearch} />
-      <div className={style.containerCard}>
-        <Cards
-          cities={cities} onClose={removeCity}
-        />
-      </div>
+      <Route path='/'>
+        <Nav onSearch={onSearch} />
+      </Route>
+      <Route path='/' exact>
+        <div className={style.containerCard}>
+          <Cards
+            cities={cities} onClose={removeCity}
+          />
+        </div>
+      </Route>
+      <Route path='/city/:cityid' render={({ match }) => {
+        const actualCity = cities.find(c => c.id === Number(match.params.cityid))
+        return <InfoCity city={actualCity} />
+      }} >
+
+      </Route>
+      <Route path='/about' exact>
+        <About />
+      </Route>
+      <Route path='/'>
+        <Footer />
+      </Route>
     </div>
   );
 }
