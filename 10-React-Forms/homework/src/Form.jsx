@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 
 
 export function validate(input) {
-  console.log(input);
-  let errors = {};
+  const errors = {};
   if (!input.username) {
     errors.username = 'Username is required';
   } else if (!/\S+@\S+\.\S+/.test(input.username)) {
@@ -12,7 +11,7 @@ export function validate(input) {
 
   if (!input.password) {
     errors.password = 'Password is required'
-  } else if (!/(?=.*[0-9])/.test(input.password)) {
+  } else if (!/(?=.*[0-9])/.test(input.password) || input.password.length < 8) {
     errors.password = 'Password is invalid'
   }
 
@@ -22,18 +21,18 @@ export function validate(input) {
 export default function Form() {
 
   const [input, setInput] = useState({
-    username: '', password: ''
+    username: '',
+    password: ''
   })
   const [errors, setErrors] = useState({});
 
   const handleInputChange = ({ target }) => {
-    setErrors(validate({
-      ...input,
-      [target.name]: target.value
-    }));
 
     setInput((prevValue) => {
-      return { ...prevValue, [target.name]: target.value }
+      const newInput = { ...prevValue, [target.name]: target.value }
+      const errors = validate(newInput);
+      setErrors(errors);
+      return newInput;
     })
   }
 

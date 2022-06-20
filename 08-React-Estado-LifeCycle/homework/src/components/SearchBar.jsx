@@ -2,8 +2,6 @@ import React, { useRef } from 'react';
 
 import styles from '../styles/SearchBar.module.css';
 
-
-
 export default function SearchBar({ onSearch }) {
   // acá va tu código
   // const [value, setValue] = React.useState('');
