@@ -16,8 +16,6 @@ class Counter extends Component {
         }, 1000);
 
     };
-
-
     render() {
         // Completa las funciones onClick de los botones
         // Al hacer clic en estos botones, el recuento debe disminuir o aumentar en consecuencia
@@ -26,8 +24,8 @@ class Counter extends Component {
                 Clickeado: {this.props.count} veces
                 <button onClick={() => { this.props.increment() }}>+</button>
                 <button onClick={() => { this.props.decrement() }}>-</button>
-                <button onClick={this.incrementIfOdd}>incrementa si es impar</button>
-                <button onClick={this.incrementAsync}>Incrementa despues de un segundos</button>
+                <button onClick={this.incrementIfOdd}>Incrementa si es impar</button>
+                <button onClick={this.incrementAsync}>Incrementa después de un segundo</button>
             </div>
         );
     }
